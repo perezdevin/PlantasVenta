@@ -40,7 +40,7 @@ public class menu {
                     boolean encontrado = false;
                     for (int i = 0; i < nombres.length; i++) {
                         if (nombres[i].toLowerCase().contains(nombreBuscado.toLowerCase())) {
-                            System.out.println(nombres[i] + " - " + origenes[i] + " " + precios[i] + " pavetes");
+                            System.out.println(nombres[i] + " - " + origenes[i] + " - $" + precios[i]);
                             encontrado = true;
                         }
                     }
@@ -56,7 +56,7 @@ public class menu {
                         System.out.println("El carrito está vacío.");
                     } else {
                         for (int i = 0; i < cantidadProductos; i++) {
-                            System.out.println(carritoNombres[i] + " " + carritoPrecios[i] + " pavetes");
+                            System.out.println(carritoNombres[i] + " - $" + carritoPrecios[i]);
                         }
                     }
                     break;
@@ -65,7 +65,7 @@ public class menu {
                     // añadirr producto al carrito
                     System.out.println("\nProductos disponibles:");
                     for (int i = 0; i < nombres.length; i++) {
-                        System.out.println((i + 1) + ". " + nombres[i] + " - " + origenes[i] + " " + precios[i] + " pavetes");
+                        System.out.println((i + 1) + ". " + nombres[i] + " - " + origenes[i] + " - $" + precios[i]);
                     }
                     System.out.print("Seleccione el número del producto a agregar: ");
                     int seleccion = scanner.nextInt();
