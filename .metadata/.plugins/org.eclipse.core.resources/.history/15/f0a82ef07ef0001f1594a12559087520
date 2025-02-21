@@ -1,0 +1,70 @@
+package pack;
+
+public class menu {
+    public static void main(String[] args) {
+        // Datos de productos
+        String[] nombres = {"Maria Juana", "Hierba de los bosques", "La seta feliz", "El oro verde"};
+        String[] origenes = {"Mexico", "Andorra", "Marrueco", "Palestina"};
+        double[] precios = {1.70, 4.20, 2.47, 1.33};
+
+        // Carrito de compras
+        String[] carritoNombres = new String[10]; // Arreglo para nombres de productos en el carrito
+        double[] carritoPrecios = new double[10]; // Arreglo para precios de productos en el carrito
+        int cantidadProductos = 0; // Contador de productos en el carrito
+
+        // Menú básico
+        System.out.println("Bienvenido a la tienda de plantas!");
+        System.out.println("1. Buscar plantas");
+        System.out.println("2. Ver carrito");
+        System.out.println("3. Salir");
+
+        // Simulación de interacción del usuario
+        int opcion = 1; // Cambia este valor para simular diferentes opciones
+
+        switch (opcion) {
+            case 1:
+                // Buscar plantas
+                System.out.println("\nBuscar plantas:");
+                String nombreBuscado = "Juana"; // Cambia este valor para simular una búsqueda
+                for (int i = 0; i < nombres.length; i++) {
+                    if (nombres[i].contains(nombreBuscado)) {
+                        System.out.println("Encontrado: " + nombres[i] + " - " + origenes[i] + " - $" + precios[i]);
+                    }
+                }
+                break;
+
+            case 2:
+                // Ver carrito
+                System.out.println("\nProductos en el carrito:");
+                if (cantidadProductos == 0) {
+                    System.out.println("El carrito está vacío.");
+                } else {
+                    for (int i = 0; i < cantidadProductos; i++) {
+                        System.out.println(carritoNombres[i] + " - $" + carritoPrecios[i]);
+                    }
+                }
+                break;
+
+            case 3:
+                // Salir
+                System.out.println("\nGracias por visitar la tienda. ¡Hasta luego!");
+                break;
+
+            default:
+                System.out.println("\nOpción no válida.");
+                break;
+        }
+
+        // Simulación de agregar un producto al carrito
+        System.out.println("\nAgregando un producto al carrito...");
+        carritoNombres[cantidadProductos] = nombres[1]; // Agrega "Hierba de los bosques"
+        carritoPrecios[cantidadProductos] = precios[1]; // Agrega su precio
+        cantidadProductos++; // Incrementa el contador
+
+        // Mostrar el carrito actualizado
+        System.out.println("\nProductos en el carrito:");
+        for (int i = 0; i < cantidadProductos; i++) {
+            System.out.println(carritoNombres[i] + " " + carritoPrecios[i] + " Pavetes");
+        }
+    }
+}
