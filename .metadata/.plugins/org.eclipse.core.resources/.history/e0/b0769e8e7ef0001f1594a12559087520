@@ -64,7 +64,7 @@ public class menu {
         // Mostrar el carrito actualizado
         System.out.println("\nProductos en el carrito:");
         for (int i = 0; i < cantidadProductos; i++) {
-            System.out.println(carritoNombres[i] + " " + carritoPrecios[i] + " Pavetes");
+            System.out.println(carritoNombres[i] + " - $" + carritoPrecios[i]);
         }
     }
 }
