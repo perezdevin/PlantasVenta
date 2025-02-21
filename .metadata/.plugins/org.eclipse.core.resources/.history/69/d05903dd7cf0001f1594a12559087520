@@ -1,0 +1,14 @@
+package pack;
+
+public class inventario {
+    Producto[] productos;
+
+    public Inventario() {
+        // Inicializar el arreglo de productos
+        productos = new Producto[4];
+        productos[0] = new Producto("Maria Juana", "Mexico", 1.70);
+        productos[1] = new Producto("Hierba de los bosques", "Andorra", 4.20);
+        productos[2] = new Producto("La seta feliz", "Marrueco", 2.47);
+        productos[3] = new Producto("El oro verde", "Palestina", 1.33);
+    }
+}
